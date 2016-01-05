@@ -19,7 +19,7 @@ public abstract class Entity {
 		
 	}
 	
-	protected float getX() {
+	public float getX() {
 		return x;
 	}
 
@@ -27,7 +27,7 @@ public abstract class Entity {
 		this.x = x;
 	}
 
-	protected float getY() {
+	public float getY() {
 		return y;
 	}
 
@@ -35,7 +35,7 @@ public abstract class Entity {
 		this.y = y;
 	}
 
-	protected int getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
@@ -43,7 +43,7 @@ public abstract class Entity {
 		this.width = width;
 	}
 
-	protected int getHeight() {
+	public int getHeight() {
 		return height;
 	}
 

@@ -14,8 +14,6 @@ public class World  {
 	private int[][] tiles;
 	
 	
-	
-	
 	public World(Game game, String path){
 		this.game = game;
 		loadWorld(path);
@@ -27,7 +25,9 @@ public class World  {
 	public void render(Graphics g){
 		for(int y=0;y< height; y++){
 			for(int x=0;x<width;x++){
-				getTile(x,y).render(g, x * Tile.TILEWIDTH, y * Tile.TILEHEIGHT);
+				getTile(x,y).render(g,(int) (x * Tile.TILEWIDTH - game.getGameCamera().getxOffset()),
+						(int) (y * Tile.TILEHEIGHT - game.getGameCamera().getyOffset()));
+				
 			}
 		}
 		
