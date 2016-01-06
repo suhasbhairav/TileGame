@@ -2,7 +2,7 @@ package dev.codenmore.tilegame.states;
 
 import java.awt.Graphics;
 
-import dev.codenmore.tilegame.Game;
+import dev.codenmore.tilegame.Handler;
 import dev.codenmore.tilegame.entities.creatures.Player;
 import dev.codenmore.tilegame.worlds.World;
 
@@ -12,10 +12,12 @@ public class GameState extends State {
 
 	private World world;
 	
-	public GameState(Game game){
-		super(game);
-		player = new Player(game, 100, 100);
-		world = new World(game, "res/worlds/world1.txt");
+	public GameState(Handler handler){
+		super(handler);
+		world = new World(handler, "res/worlds/world1.txt");
+		handler.setWorld(world);
+		player = new Player(handler, 100, 100);
+		
 	
 	}
 	
