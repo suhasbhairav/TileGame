@@ -28,10 +28,6 @@ public class World  {
 		int yStart = (int)Math.max(0, game.getGameCamera().getyOffset() /  Tile.TILEHEIGHT);
 		int yEnd = (int) Math.min(width, (game.getGameCamera().getyOffset() + game.getHeight())/ Tile.TILEHEIGHT + 1);
 		
-		
-		
-		
-		
 		for(int y=yStart;y< yEnd; y++){
 			for(int x=xStart;x< xEnd;x++){
 				getTile(x,y).render(g,(int) (x * Tile.TILEWIDTH - game.getGameCamera().getxOffset()),
